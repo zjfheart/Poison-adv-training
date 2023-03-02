@@ -1,13 +1,14 @@
 # Poison-adv-training
 Poisoning attack methods against adversarial training algorithms.
 
-
+## Usage
+### Targeted Attack
 You can run the following command to generate clean-label targeted poison data and validate it on the robust learner.
 ```
 python tar_poisoning.py --poisonkey 2000000000 --eps 16 --tau 0.01 --budget 0.04 --attackiter 250 --restarts 8 --vruns 4
 ```
 
-
+### Untargeted Attack
 Run the following command to generate clean-label untargeted poison data.
 ```
 python untar_poisoning.py --train-steps 5000 --optim sgd --lr 0.1 --lr-decay-rate 0.1 --lr-decay-freq 2000 --pgd-steps 10 --pgd-step-size 35 --pgd-random-start --patch-size 0.03 --location 4
