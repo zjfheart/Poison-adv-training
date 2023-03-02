@@ -1,6 +1,12 @@
 # Poison-adv-training
 Poisoning attack methods against adversarial training algorithms.
 
+## Prerequisites
+Python (3.8)  
+Pytorch (1.8.0)  
+CUDA  
+Numpy  
+
 ## Usage
 ### Targeted Attack
 You can run the following command to generate clean-label targeted poison data and validate it on the robust learner.
