@@ -23,3 +23,6 @@ Then, run the following command to validate clean-label untargeted poison data o
 ```
 python validate_untar_poisoning.py --seed 2000000000 --noise-rate 0.5 --train-steps 15000 --optim sgd --lr 0.1 --lr-decay-rate 0.1 --lr-decay-freq 6000 --pgd-radius 8 --pgd-steps 10 --pgd-step-size 1.6 --pgd-random-start --report-freq 200 --save-freq 100000 --noise-path ./exp_data/untargeted/patch_cifar10_loc4_ss35_ps0.03/poisons/patch-fin-def-noise.pkl --mask-path ./exp_data/untargeted/patch_cifar10_loc4_ss35_ps0.03/poisons/patch-fin-def-mask.pkl --save-name train
 ```
+
+## Generated Poison Resource
+We have shared our generated [targeted poison data](https://drive.google.com/drive/folders/1HfP8IRZUanEZeRQ4TVrxkNBDxt93U0QR?usp=sharing) and [untargeted poison data](https://drive.google.com/drive/folders/1Ycn46Vd4PbkHSmFg0N0uwTVt3YRpAZ8I?usp=sharing) on Google Drive.
