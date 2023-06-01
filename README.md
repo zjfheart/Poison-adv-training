@@ -1,5 +1,31 @@
 # Poison-adv-training
-Poisoning attack methods against adversarial training algorithms.
+This code repository provides two poison attack methods (targeted attack & untargeted attack) against adversarial training algorithms, revealing the vulnerability of adversarial learning algorithms.
+
+## Overview
+***Adversarial training*** (AT) is a robust learning algorithm that can defend against adversarial attacks in the inference phase and mitigate the side effects of corrupted data in the training phase. 
+As such, it has become an indispensable component of many artificial intelligence (AI) systems. 
+However, in high-stake AI applications, it is crucial to understand AT's vulnerabilities to ensure reliable deployment.
+
+In this work, we investigate AT's susceptibility to poisoning attacks, a type of malicious attack that manipulates training data to compromise the performance of the trained model.
+Previous work has focused on poisoning attacks against ***standard training***, but little research has been done on their effectiveness against AT. 
+To fill this gap, we design and test effective poisoning attacks against AT. 
+
+Specifically, we investigate and design clean-label poisoning attacks, allowing attackers to imperceptibly modify a small fraction of training data to control the algorithm's behavior on a specific target data point.
+Additionally, we propose the clean-label untargeted attack, enabling attackers can attach tiny ***stickers*** on training data to degrade the algorithm's performance on all test data, where the stickers could serve as a signal against unauthorized data collection.
+
+We separately illustrate the two types of poison attacks mentioned above in Figure 1.
+
+<p align="center">
+	<img src="images/poi_at_tar.jpg" width="650"\>
+	<p align="center">Figure 1(a). illustrates the clean-label targeted attack, where the attacker aims to control the behavior of the deep network on a specific target image only. The attacker modifies a tiny fraction of the training data, which appears unmodified and labeled correctly. A learner then trains a network from scratch with this modified dataset. The attacker's minor modification only makes the network output the attacker-specified label on the specific and unperturbed target image without affecting predictions on other input data.</p>
+</p>
+
+&nbsp;
+
+<p align="center">
+	<img src="images/poi_at_untar.jpg" width="650"\>
+	<p align="center">Figure 1(b). shows the clean-label untargeted attack, where the attacker attaches tiny stickers to publicly released images. These stickers signal to the unauthorized data collectors that those images are prohibited from being collected, and otherwise, they will significantly harm the learner, even if the learner employs adversarial training to train a model.</p>
+</p>
 
 ## Prerequisites
 Python (3.8)  
