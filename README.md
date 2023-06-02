@@ -61,7 +61,7 @@ The default dataset is CIFAR-10. You can specify the experimental dataset as Tin
 <p align="center">
 	<img src="images/tar_ld_c10.jpg" width="430" style="margin-right:20px;"\>
 	<img src="images/tar_ld_tin.jpg" width="450"\>
-	<p align="center">Figure 3. Clean-label targeted poison attacks against a robust learner with a different perturbation radius $\epsilon$ by a attacker. The points below the gray dashed line signify the success of the poisoning attack in manipulating the robust learner's behavior on a chosen target.</p>
+	<p align="center">Figure 3. Clean-label targeted poison attacks against robust learners with a different perturbation radius $\epsilon$ by a attacker. The points below the gray dashed line signify the success of the poisoning attack in manipulating the robust learner's behavior on a chosen target.</p>
 </p>
 
 ### Untargeted Attack
