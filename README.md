@@ -1,5 +1,6 @@
 # Poison-adv-training
 This code repository provides two poison attack methods (targeted attack & untargeted attack) against adversarial training algorithms. It aims to assess and reveal the vulnerabilities of adversarial learning algorithms.
+Paper link: https://arxiv.org/abs/2305.00399
 
 ## Overview
 ***Adversarial training*** (AT) is a robust learning algorithm that can defend against adversarial attacks in the inference phase and mitigate the side effects of corrupted data in the training phase. 
